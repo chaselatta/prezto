@@ -11,15 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# Source z.sh
-# TODO: Setup z.sh
-# source "${HOME}/bin/z.sh"
-
-# Customize to your needs...
-# export GOPATH="$HOME/workspace/golang:$HOME/workspace/personal/golang"
-# export GOBIN="$HOME/workspace/golang/bin"
-# export PATH="${PATH}:${GOBIN}:${HOME}/bin/node_modules/bin:${HOME}/.tools-cache/home/heron/heron-cli/bin/"
-# export EDITOR="vim"
+export EDITOR="vim"
 
 #
 ## Aliases
@@ -58,14 +50,11 @@ alias glg='git lg'
 unsetopt CORRECT
 
 #
-## Functions
-#
-function arc_paste() {
-    pbpaste | arc paste | awk '{print $2}' | pbcopy && open $(pbpaste)
-}
-
-#
 ## RBENV
 #
 # TODO: Setup  rbenv
 # eval "$(rbenv init -)"
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zlocal" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zlocal"
+fi

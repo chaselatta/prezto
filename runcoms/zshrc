@@ -22,9 +22,6 @@ alias ppjson='python -m"json.tool"'
 alias findd="find . -type f -name"
 alias findir="find . -x -type d -name"
 
-alias start_postgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stop_postgres='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
 #
 ## Git aliases
 #
